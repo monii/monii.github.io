@@ -2,6 +2,7 @@ body {
   height: 100%;
   margin: 0;
 }
+
 .js-background {
   position: fixed;
   top: -50%;
@@ -33,23 +34,30 @@ header {
   padding: 3px;
 }
 
-div {
+main {
   text-align: center;
   margin-top: 15px;
   margin-bottom: 15px;
   color: white;
 }
 
-b {
-  margin-right: 100px;
-  margin-left: 100px;
+.js-time {
+  margin-top: 10vh;
+  margin-bottom: 30px;
+  font-size: 20vh;
+}
+
+.js-todo-div {
+  margin: 15px;
+}
+
+strong {
   display: inline-block;
+  font-size: 20px;
 }
 
 ul {
   margin-top: 0px;
-  margin-left: 100px;
-  margin-right: 100px;
   display: inline-block;
   list-style: none;
   vertical-align: top;
@@ -59,8 +67,19 @@ li {
   text-align: left;
 }
 
+input[type='text'] {
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  background: transparent;
+  outline: 0;
+}
+
+::placeholder {
+  color: white;
+}
+
 input[type='checkBox'],
-span,
 button {
   padding: 10px;
 }
@@ -75,13 +94,60 @@ button:focus {
   outline: 0;
 }
 
-.js-time {
-  margin-top: 10vh;
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 20vh;
-}
-
 .hide-input {
   display: none;
+}
+
+@media (max-width: 767px) {
+  .js-city,
+  .js-weather {
+    font-size: 7vh;
+    margin: 10px;
+    padding: 3px;
+  }
+
+  .js-time {
+    margin-top: 10vh;
+    margin-bottom: 30px;
+    font-size: 20vh;
+  }
+
+  strong {
+    display: block;
+    font-size: 20px;
+  }
+
+  ul {
+    margin-top: 0px;
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+  }
+}
+
+@media (max-width: 639px) {
+  .js-city,
+  .js-weather {
+    font-size: 5vh;
+    margin: 10px;
+    padding: 3px;
+  }
+
+  .js-time {
+    margin-top: 10vh;
+    margin-bottom: 30px;
+    font-size: 10vh;
+  }
+
+  strong {
+    display: block;
+    font-size: 20px;
+  }
+
+  ul {
+    margin-top: 0px;
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+  }
 }
