@@ -20,8 +20,13 @@
 :red_circle: [과제 codeSandeBox](https://codesandbox.io/dashboard/drafts?workspace=6cc00266-fd13-495b-a7fb-310abec1080e)
 
 -----------------
+### :clap: 결과
 
-### :computer: 개발환경
+:point_right: https://monii.github.io/
+
+-----------------
+
+### :computer: 개발환경/기능
 - 개발언어: javaScript,HTML5,CSS <br/>
 - IDE: VScode <br/>
 - API: https://openweathermap.org/current#format <br/>
@@ -40,6 +45,10 @@ function getWeather(lat, lon) {
     });
 }
 ```
+- 기능 <br/>
+1. 이름, 오늘 할일, 완료한 일을 저장! <br/>
+2. 위치 기반으로 날씨와 기온 표시<br/>
+
 --------------------------
   
 ### :pushpin: ToDo Update
