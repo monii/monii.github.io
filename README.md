@@ -52,8 +52,8 @@ function getWeather(lat, lon) {
 --------------------------
   
 ### :pushpin: ToDo Update
-1. 전체적인 CSS수정하기
-2. ~~날씨 아이콘 추가~~
+1. ~~전체적인 CSS수정하기~~
+
 
 
 
