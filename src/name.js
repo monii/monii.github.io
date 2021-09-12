@@ -10,7 +10,7 @@ function saveName(name) {
 }
 
 function showName(name) {
-  NAME.innerHTML = `Good Morning ${name}!`;
+  NAME.innerHTML = `${name}'의 오늘 하루🌞`;
   NAME_INPUT.classList.add(HIDE_INPUT);
 }
 
