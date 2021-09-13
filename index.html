@@ -13,8 +13,8 @@
     <main>
         <div class="grid-container">
             <section class="clock">
-                <div class="js-time">00:00</div>
-                <div class="js-day"></div>
+                <strong class="js-time">00:00</strong>
+                <h4 class="js-day"></h4>
             </section>
             <section class="todo-task">
                 <strong>Today' TODO</strong>
@@ -33,14 +33,16 @@
                     <input type="text" placeholder="Enter the yuour name">
                 </form>
             </section>
-            <aside class="weather">
-                <div>weather</div>
-            </aside>
+            <section class="weather">
+                <h1 class="js-weather">오늘의 날씨</h1>
+                <section class="js-weather-today"></section>
+                <section class="js-weather-weekly"></section>
+            </section>
 
         </div>
     </main>
     <script src="src/backGround.js"></script>
-    <script src="src/header.js"></script>
+    <script src="src/weather.js"></script>
     <script src="src/clock.js"></script>
     <script src="src/name.js"></script>
     <script src="src/todo.js"></script>
