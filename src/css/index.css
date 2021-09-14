@@ -152,6 +152,48 @@ input[type="text"]::placeholder {
   padding: 10px;
 }
 
+#js-title-month{
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+#js-days {
+  width: 100%;
+  display: flex; 
+  flex-wrap: wrap; 
+  border-left: solid;
+  background: white;
+  color: black;
+}
+
+#js-title-days{
+  display: flex; 
+  flex-wrap: wrap; 
+  width: 100%;
+  border-top: solid;
+}
+
+#js-dates {
+  display: flex; 
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.date, .day {
+  text-align: center; 
+  width: calc(100%/7); 
+  height: 50px;
+  padding: 13px 0; 
+  box-sizing: border-box;
+  border-bottom: solid;
+  border-right: solid;
+}
+
+.today {
+  background-color: cadetblue;
+  opacity: 0.8;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -192,20 +234,20 @@ input[type="text"]::placeholder {
   
   .name-calendar {
     grid-area: namecalendar;
-    grid-column: 2 / 2;
-    grid-row:  1/ 4;
+    grid-column: 2 / 3;
+    grid-row:  1/ 6;
     background-color: aqua;
   }
   
   .weather {
     grid-area: weather;
-    grid-column: 2 / 2;
-    grid-row:  4/ 6;
+    grid-column: 3 / 4;
+    grid-row:  1/ 6;
     background-color: greenyellow;
   }
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     text-align: center; 
   }
