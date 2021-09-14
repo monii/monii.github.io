@@ -14,10 +14,10 @@ function getTime() {
 }
 
 function getDay() {
-  const year = NOWDATE.getFullYear();
-  const month = NOWDATE.getMonth();
-  const date = NOWDATE.getDate();
-  const dayLabel = NOWDATE.getDay();
+  const year = nowDate.getFullYear();
+  const month = nowDate.getMonth();
+  const date = nowDate.getDate();
+  const dayLabel = nowDate.getDay();
   DAY_DOM.innerHTML = `${year}년 ${month+1}월 ${date}일 ${DAYS[dayLabel]}`
 }
 
