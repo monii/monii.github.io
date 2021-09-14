@@ -1,12 +1,12 @@
 const TIME_DOM = document.querySelector('.js-time');
 const DAY_DOM = document.querySelector('.js-day');
 const DAYS = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
-const NOWDATE = new Date();
 
 function getTime() {
-  let hour = NOWDATE.getHours(),
-    min = NOWDATE.getMinutes(),
-    second = NOWDATE.getSeconds();
+  const nowDate = new Date();
+  let hour = nowDate.getHours(),
+    min = nowDate.getMinutes(),
+    second = nowDate.getSeconds();
   hour = hour < 10 ? `0${hour}` : hour;
   min = min < 10 ? `0${min}` : min;
   second = second < 10 ? `0${second}` : second;

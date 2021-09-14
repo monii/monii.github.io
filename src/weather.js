@@ -73,11 +73,12 @@ async function getWeather(lat, lon) {
 }
 
 async function getWeeklyWeather(lat, lon) {
+  const today = new Date();
   const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={daily}&appid=${API_KEY}&units=metric&lang=kr`);
   if(response.ok) {
     const {daily} = await response.json();
     const weekly = daily.slice(1);
-    const dayLabel = NOWDATE.getDay();
+    const dayLabel =today.getDay();
     let index = dayLabel;
     weekly.forEach((day) => {
       const {weather,temp} = day;

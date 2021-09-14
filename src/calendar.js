@@ -3,9 +3,10 @@ const THIS_MONTH = document.querySelector('#js-title-month');
 const THIS_DAYS = document.querySelector('#js-dates');
 
 function showCalendar() {
-    const currenetYear = NOWDATE.getFullYear();
-    const currentMonth = NOWDATE.getMonth();
-    const today = NOWDATE.getDate();
+    const todayDate = new Date();
+    const currenetYear = todayDate.getFullYear();
+    const currentMonth = todayDate.getMonth();
+    const today = todayDate.getDate();
   
     //이번 달
     THIS_MONTH.innerHTML = currentMonth +1 < 10 ? `0${currentMonth+1} 월` : `${currentMonth+1}월`;
