@@ -56,7 +56,7 @@ function getWeatherIcon(weatherId, isDay) {
 }
 
 async function getWeather(lat, lon) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`);
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`);
   if(response.ok) {
     const {weather, main ,name} = await response.json();
     saveCityLs(name);
@@ -73,7 +73,7 @@ async function getWeather(lat, lon) {
 }
 
 async function getWeeklyWeather(lat, lon) {
-  const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={daily}&appid=${API_KEY}&units=metric`);
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={daily}&appid=${API_KEY}&units=metric&lang=kr`);
   if(response.ok) {
     const {daily} = await response.json();
     const weekly = daily.slice(1);
@@ -87,9 +87,9 @@ async function getWeeklyWeather(lat, lon) {
       const dayDiv = document.createElement('div');
       const tempMinDiv = document.createElement('div');
       const tempMaxDiv = document.createElement('div');
-      dayDiv.innerText = `${DAYS.at((++index)-7)}`
-      tempMinDiv.innerText = `${temp.min}℃`;
-      tempMaxDiv.innerText = `${temp.max}℃`;
+      dayDiv.innerText = `${DAYS.at((++index)-7).substring(0,1)}`
+      tempMinDiv.innerText = `${temp.min} `;
+      tempMaxDiv.innerText = `${temp.max} `;
       dailyContainer.appendChild(dayDiv);
       dailyContainer.appendChild(weatherIcon);
       dailyContainer.appendChild(tempMinDiv);

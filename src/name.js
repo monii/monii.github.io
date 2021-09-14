@@ -26,6 +26,10 @@ function init() {
   const getName = localStorage.getItem(KEY_NAME);
   if (getName !== null) {
     showName(getName);
+    NAME_FORM.style.display = 'none';
+  } else {
+    NAME_FORM.style.display = 'block';
+
   }
 }
 init();
