@@ -7,6 +7,7 @@ function showCalendar() {
     const currenetYear = todayDate.getFullYear();
     const currentMonth = todayDate.getMonth();
     const today = todayDate.getDate();
+    console.log(today);
   
     //이번 달
     THIS_MONTH.innerHTML = currentMonth +1 < 10 ? `0${currentMonth+1} 월` : `${currentMonth+1}월`;
@@ -33,7 +34,7 @@ function showCalendar() {
      //이번달 
      for(let i = 0; i < currenetDates.length; i++) {
          const div = document.createElement('div');
-         div.className = i !== today ? "date" : "date today";
+         div.className = i !== (today-1) ? "date" : "date today";
          div.innerText = currenetDates[i];
          THIS_DAYS.appendChild(div);
      }
@@ -47,7 +48,7 @@ function showCalendar() {
 
 function init() {
     const savedName = localStorage.getItem(KEY_NAME);
-    if(saveName !== null) {
+    if(savedName !== null) {
         showCalendar();
     }
 }
