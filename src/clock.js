@@ -14,6 +14,7 @@ function getTime() {
 }
 
 function getDay() {
+  const nowDate = new Date();
   const year = nowDate.getFullYear();
   const month = nowDate.getMonth();
   const date = nowDate.getDate();
