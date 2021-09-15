@@ -54,6 +54,7 @@ function getWeather(lat, lon) {
 ### :pushpin: ToDo Update
 1. ~~전체적인 CSS수정하기(2021.09.12)~~
 2. ~~일주일 날씨 API추가(2021.09.13)~~
+3. ~~달력추가(2021.09.14)~~
 
 
 
