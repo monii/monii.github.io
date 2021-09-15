@@ -7,7 +7,6 @@ function showCalendar() {
     const currenetYear = todayDate.getFullYear();
     const currentMonth = todayDate.getMonth();
     const today = todayDate.getDate();
-    console.log(today);
   
     //이번 달
     THIS_MONTH.innerHTML = currentMonth +1 < 10 ? `0${currentMonth+1} 월` : `${currentMonth+1}월`;
@@ -49,7 +48,10 @@ function showCalendar() {
 function init() {
     const savedName = localStorage.getItem(KEY_NAME);
     if(savedName !== null) {
+        CALENDAR.style.display = 'block';
         showCalendar();
+    } else {
+        CALENDAR.style.display = 'none';
     }
 }
 

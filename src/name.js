@@ -7,6 +7,7 @@ const HIDE_INPUT = 'hide-input';
 function saveName(name) {
   localStorage.setItem(KEY_NAME, name);
   showName(name);
+  window.location.reload();
 }
 
 function showName(name) {
